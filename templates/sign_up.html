@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/sign_up.css' %}">
+  <title>Sign-Up</title>
+</head>
+<body>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <p>Are you a new user</p>
+    <form action="/signup">
+      <div class="decorate">
+        <div class="row">
+          <div class="col">
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="email">
+          </div>
+          <div class="col">
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password">
+          </div>
+          <div class="col">
+            <label><b>Confirm Password</b></label>
+            <input type="password" placeholder="Confirm Password" name="confirm-password">
+          </div>
+          <p>By creating an account you agree to our Terms & Privacy<input type="checkbox"></p>
+          <button type="button">Exit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

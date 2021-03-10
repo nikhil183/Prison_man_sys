@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Prison Management System</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+  <div class="header">
+
+    <a href="#about">About</a>
+  </div>
+</div>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Prison Management System</a>
+    <a class="navbar-brand" href="{% url 'login' %}">Login</a>
+  </nav>
+
+
+
+  <div class="jumbotron" style="background-image: url(static/images/jail.jpg);background-repeat: no-repeat;
+  background-size: cover";
+  height: 500px>
+
+
+    <div class="container">
+      <div class="row row-header">
+        <div class="col-12 col-sm-8" style="color:white">
+          <h2>New Management for the prisoners!!</h2>
+          <p class="d-none d-sm-block" style="
+                  font-size: 1.40rem;
+                  color: rgb(253, 247, 255);
+                   font: bold;
+                   font-family: Times New Roman, Times, serif;">
+                   “Prison Management System (PMS)” is an ambitious work in the same
+            direction that will help Indian Prison System to reach those heights technologically, that it
+            requires desperately and which will prove beneficial for the other government departments
+            as well.This project is aimed at developing a prison management system that is a collection
+            of registers and reports for the effective management of prisons. This system will contain the
+            modules like nominal roll, case register, parole register, Interview requests, In-out register
+            and an automated release diary generator.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--<div class="container ">-->
+      <div class="col-12 col-4 d-flex justify-content-center font-style: italic;">
+
+        <h2 style="color:black;font-family: Amarante;  text-shadow: 2px 2px 4px #000000;padding-bottom: 30px;font-size: 2.5rem">System Login Options</h2>
+
+      </div>
+      <!--<div class="row col-lg-12 col-sm-auto d-flex justify-content-center ">
+        <div class="row-content">
+          <img src="{% static 'images/admin.png' %}">
+          <div class="row-text">
+            <h3>Admin</h3>
+          </div>
+        </div>
+        <div class="row-content">
+          <img src="{% static 'images/jailor.jpg' %}">
+          <div class="row-text">
+            <h3>Jailor</h3>
+          </div>
+        </div>
+        <div class="row-content">
+          <img src="{% static 'images/lawyer.jpg' %}">
+          <div class="row-text">
+            <h3>Lawyer</h3>
+          </div>
+        </div>
+
+      </div>-->
+
+      <div class="container con">
+    <div class="row">
+
+
+        <div class="col-lg-4 ">
+            <div class="card " >
+
+
+                <img class="card-img-top"  src="{% static 'images/admin.png' %}">
+                <div class="card -body" alt="Card image cap">
+                    <h4 class="card-title" style="color:rgb(17, 4, 71);text-align: center;font-weight: bold;text-shadow:2px 2px 4px rgb(176, 160, 242) ">Admin</h4>
+                    <p class="card-text" style="color:black;text-align: center;font-weight: bold;text-shadow:2px 2px 4px rgb(248, 247, 252) ">Admin will see and manage all the database of the system,admin would be having access of all the records</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 ">
+            <div class="card " >
+
+
+                <img class="card-img-top" id="i1" src="{% static 'images/jailor1.jpg' %}">
+                <div class="card -body" alt="Card image cap">
+                    <h4 class="card-title" style="color:rgb(17, 4, 71);text-align: center;font-weight: bold;text-shadow:2px 2px 4px rgb(176, 160, 242)">Jailor</h4>
+                    <p class="card-text" style="color:black;text-align: center;font-weight: bold;text-shadow:2px 2px 4px rgb(248, 247, 252)  "> The jailor can record the details about the prisoner. Someone has to be there who is responsible for the security of the system.</p>
+
+                  </div>
+                </div>
+            </div>
+
+
+        <div class="col-lg-4 h-100">
+            <div class="card" >
+
+
+                <img class="card-img-top" id="i3" src="{% static 'images/lawyer.jpg' %}">
+                <div class="card -body" alt="Card image cap">
+                    <h4 class="card-title" style="color:rgb(17, 4, 71);text-align: center;font-weight: bold;text-shadow:2px 2px 4px rgb(176, 160, 242)">Lawyer</h4>
+                    <p class="card-text" style="color:black;text-align: center;font-weight: bold;text-shadow:2px 2px 4px rgb(248, 247, 252) ">Lawyer would be able to login and see the prisoner's record and other parole,case registers</p>
+                </div>
+            </div>
+        </div>
+
+        <!--<div class="col-lg-3 h-100">
+            <div class="card" >
+
+
+                <img class="card-img-top" id="i4" src="{% static 'images/prisoner.jpeg' %}">
+                <div class="card -body" alt="Card image cap">
+                    <h4 class="card-title" style="color:rgb(17, 4, 71);text-align: center;font-weight: bold;text-shadow:2px 2px 4px rgb(176, 160, 242)">Prisoner</h4>
+                    <p class="card-text" style="color:black;text-align: center;font-weight: bold;text-shadow:2px 2px 4px rgb(248, 247, 252) ">Prisoner will be having unique id and all its info like parole register,case regiter will be stored in database</p>
+                        <button class="btn btn-success btn-sm">Info</button>
+
+
+                </div>
+            </div>
+        </div>-->
+    </div>
+    </div>
+<h1 style="color:black;text-align: center;text-shadow: 2px 2px 4px #000000;margin-top: 50px;margin-bottom: 30px">Prisoner's Information</h1>
+<div class="row col-lg-12 col-sm-auto d-flex justify-content-center ">
+
+            <div class="col-lg-3">
+                <img class="space" src="/static/images/name.png" style="padding: 20px">
+                <div class="row-text" style="text-align: center"><h3><u>Prisoner's Info</u></h3></div>
+            </div>
+            <div class="col-lg-3">
+                <img class="space" src="/static/images/username.png" style="padding: 20px">
+                <div class="row-text" style="text-align: center"><h3><u>Prisoner's ID</u></h3></div>
+            </div>
+            <div class="col-lg-3">
+                <img class="space" src="/static/images/case.png" style="padding: 31px">
+                <div class="row-text" style="text-align: center"><h3><u>Case Register</u></h3></div>
+            </div>
+            <div class="col-lg-3">
+                <img class="space" src="/static/images/probation.jpg" style="padding: 20px">
+                <div class="row-text" style="text-align: center"><h3><u>Parole Register</u></h3></div>
+
+            </div>
+
+        </div>
+
+
+    <footer style="text-align: center;
+    margin-top:100px;
+  background-color: rgb(5,1,46);
+  color: white;">
+  <p style="font-size: 20px;padding:10px; color:white;">For More Information,Reach Us At<br></p>
+  <a href="https://google.com" style=" font-size: 20px;padding:10px; color:white;">prisonsystem2020@gmail.com
+    <i class="far fa-user-circle"></i></a>
+  <a href="https://google.com" style="font-size: 20px;padding:10px; color:white;">
+                        PrisonManagement.org.in
+
+                    </a>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

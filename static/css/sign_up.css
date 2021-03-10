@@ -1,0 +1,33 @@
+{box-sizing: border-box}
+
+
+input[type=text], input[type=password] {
+  width: 18%;
+  padding: 5px;
+  margin: 3px 0 22px 0;
+  display: inline-block;
+
+  border: none;
+  background: #f1f1f1;
+  color:"red";
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* padding to container  */
+.container {
+  padding-top:150px;
+  padding-left:  550px;
+}
+
+
+
+.jumbotron .p {
+  font-size: 1.40rem;
+  color: rgb(253, 247, 255);
+  font: bold;
+  font-family: "Times New Roman", Times, serif;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Prison Management System</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    </head>
+  <body>
+
+    <!--navbar-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Prison Management System</a>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-link active" href="{% url 'logout' %}"  style="">Logout</a>
+      <a class="nav-link active" href="#"  style="">{{request.user}}</a>
+    </div>
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="margin-left: 850px">
+      <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+    </form>
+    </div>
+
+  </nav>
+
+  <!--Background for jailor-->
+  <div class="jumbotron" style="background-image: url(/static/images/2.jpg);
+  background-size: contain;min-height: 400px;width:100%;">
+  <h1 style="color:rgb(255, 255, 255);font-weight: bold;font-family: Times New Roman, Times, serif;margin-top: 50px"><u>THE JAILOR'S WORKING</u></h1>
+
+    <div class="row">
+        <a class="btn btn-md btn-primary" style="margin-right: 50px;margin-left: 40px;margin-top: 20px" href="{% url 'viewprisoner' %}">VIEW ALL PRISONERS</a>
+        <a class="btn btn-md btn-success" style="margin-top: 20px" href="{% url 'addprisoner' %}">ADD NEW PRISONER</a>
+
+    </div>
+
+</div>
+
+<!--Background color-->
+<div>
+
+	<div class="row">
+		<div class="col-lg-6" style="background-color:rgb(142, 148, 144);background-size: cover;height:800px; ">
+			<p style="color:white;font-family: Times New Roman, Times, serif;font-size: 30px;font-weight: bold;margin-left: 230px"><u>Jailor Will Keep Track On</u></p>
+			<div class="row col-lg-12 col-sm-auto d-flex justify-content-center ">
+
+            <div class="row">
+            	<div class="col-lg-3">
+                <img class="space" src="/static/images/name.png" style="margin-top: 60px">
+                <div class="row-text" style="text-align: center"><h3 style="color:white;padding-left: 30px "><u>Prisoner's Info</u></h3></div>
+            	</div>
+            	<div class="col-lg-3">
+                <img class="space" src="/static/images/username.png" style="padding-left: 150px;margin-top: 60px">
+                <div class="row-text" style="text-align: center"><h3 style="padding-left: 200px;color:white"><u>Prisoner's ID</u></h3></div>
+            	</div>
+        	</div>
+
+            <div class="row">
+            	<div class="col-lg-3">
+                <img class="space" src="/static/images/case.png" style="margin-top: 60px;height: 220px;">
+                <div class="row-text" style="text-align: center"><h3 style="color:white"><u>Case Register</u></h3></div>
+            	</div>
+            	<div class="col-lg-3">
+                <img class="space" src="/static/images/probation.jpg" style="padding-left: 150px;margin-top: 60px">
+                <div class="row-text" style="text-align: center"><h3 style="padding-left: 200px;color:white"><u>Parole Register</u></h3></div>
+            	</div>
+            </div>
+
+        </div>
+		</div>
+		<div class="col-lg-6" style="background-color: rgb(191, 73, 10)">
+			<p style="color:white;font-family: Times New Roman, Times, serif;font-size: 30px;font-weight: bold;margin-left: 230px"><u>Jailor's Functions</u></p>
+			<div class="row">
+				<img class="space" src="/static/images/jailor1.jpg" style="padding: 20px;margin-left: 220px">
+			</div>
+			<div class="row">
+				<p class="d-none d-sm-block" style="
+                  font-size: 1.40rem;
+                  color: rgb(253, 247, 255);
+                   font: bold;
+                   font-family: Times New Roman, Times, serif;
+                   text-align: center;padding-top: 50px;
+                   padding-bottom: 40px">
+                   The Jailor is the main entity of the Prison Management System.He will keep a track on all of the
+                    records related to every prisoner.He is the one who would have access of the database also and have access of the prisoner's data.Jailor will have two options, first he could see all the existing
+                     prisoners information and second can add new prisoner by providing unique ID to it.He will have
+                 	all data of prisoner like personal iformation, the username,id,case related all data and parole
+             		information apart from tis he can make changes in the prisoner's information as per need.</p>
+
+			</div>
+			<div class="row">
+				<!--<a class="btn btn-md btn-primary" style="margin-right: 50px;margin-left: 40px" href="{% url 'viewprisoner' %}">VIEW ALL PRISONERS</a>
+				<a class="btn btn-md btn-success" href="{% url 'addprisoner' %}">ADD NEW PRISONER</a>-->
+        <a class="btn btn-md btn-primary" style="margin-right: 50px;margin-left: 40px" href="{% url 'jailorinfo' %}">MORE INFORMATION</a>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer style="text-align: center;
+    margin-top:30px;
+  background-color: rgb(5,1,46);
+  color: white;">
+  <p style="font-size: 20px;padding:10px; color:white;">For More Information,Reach Us At<br></p>
+  <a href="https://google.com" style=" font-size: 20px;padding:10px; color:white;">jailor2020@gmail.com
+    <i class="far fa-user-circle"></i></a>
+  <a href="https://google.com" style="font-size: 20px;padding:10px; color:white;">
+                        PrisonManagement.org.in
+
+                    </a>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+</html>
